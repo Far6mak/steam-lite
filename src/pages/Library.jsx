@@ -37,14 +37,13 @@ const SortableLibraryItem = ({ game, isRunning, toggleGame, removeFromLibrary })
   };
 
   return (
-    <div
-      ref={setNodeRef}
-      style={style}
-      {...attributes}
-      {...listeners}
-      className="library-item"
-    >
-      {/* LEFT SIDE: TEXT + PLAY */}
+    <div ref={setNodeRef} style={style} className="library-item">
+      {/* Drag-ручка — абсолютно позиционирована */}
+      <span {...attributes} {...listeners} className="drag-handle">
+        ☰
+      </span>
+
+      {/* Левая часть — информация и кнопка Play */}
       <div className="library-left">
         <div className="library-info">
           <h3>{game.title}</h3>
@@ -60,7 +59,7 @@ const SortableLibraryItem = ({ game, isRunning, toggleGame, removeFromLibrary })
         </button>
       </div>
 
-      {/* RIGHT SIDE: REMOVE */}
+      {/* Кнопка Remove */}
       <button
         className="remove-btn"
         onClick={() => removeFromLibrary(game.id)}
