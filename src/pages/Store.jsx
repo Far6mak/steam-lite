@@ -1,5 +1,6 @@
 import { useGameStore } from "../store/gameStore";
 
+import FeaturedGame from "../components/FeaturedGame";
 import GameCard from "../components/GameCard";
 import SearchBar from "../components/SearchBar";
 import GenreFilter from "../components/GenreFilter";
@@ -12,7 +13,6 @@ export default function Store() {
   const genreFilter = useGameStore((state) => state.genreFilter);
   const sortType = useGameStore((state) => state.sortType);
 
-  // 🔎 фильтрация + сортировка (ОДИН РАЗ, без дублей)
   const filteredGames = games
     .filter((game) =>
       game.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -31,14 +31,17 @@ export default function Store() {
     <div className="page">
       <h2>Store</h2>
 
-      {/* 🔧 Панель управления */}
-      <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
+      {/* 🎛 СНАЧАЛА УПРАВЛЕНИЕ */}
+      <div className="store-controls">
         <SearchBar />
         <GenreFilter />
         <SortSelect />
       </div>
 
-      {/* 🎮 Игры */}
+      {/* 🔥 ПОТОМ РЕКОМЕНДАЦИЯ */}
+      <FeaturedGame />
+
+      {/* 🎮 ПОТОМ СПИСОК */}
       <div className="game-grid">
         {filteredGames.length === 0 ? (
           <p style={{ opacity: 0.6 }}>No games found</p>

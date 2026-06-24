@@ -168,3 +168,213 @@ select {
 .remove-btn:hover {
   background: #dc2626;
 }
+
+.featured {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.featured::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(59, 130, 246, 0.2);
+  filter: blur(80px);
+  top: -50px;
+  right: -50px;
+}
+
+.featured-content {
+  position: relative;
+  z-index: 2;
+}
+
+.featured h1 {
+  margin: 5px 0;
+  font-size: 28px;
+}
+
+.featured p {
+  margin: 3px 0;
+  color: #9ca3af;
+}
+
+.featured button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.featured button:hover {
+  background: #2563eb;
+}
+
+.store-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 12px;
+  margin: 15px 0;
+
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+
+  flex-wrap: wrap;
+
+  position: sticky;
+  top: 60px;
+  z-index: 10;
+
+  width: 100%;
+}
+
+.game-card {
+  overflow: hidden;
+}
+
+.game-image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.game-card img {
+  transition: 0.3s;
+}
+
+.game-card:hover img {
+  transform: scale(1.05);
+}
+
+.featured {
+  width: 100%;
+  height: 240px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background: #0f172a;
+  border: 1px solid #1f2937;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 🔥 fade animation */
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(1.02);
+}
+
+/* 🎬 background image / gif */
+.featured-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+
+  filter: blur(0px) brightness(0.6);
+  opacity: 0.8;
+}
+
+/* текст поверх */
+.featured-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.featured {
+  position: relative;
+  width: 100%;
+  height: 260px;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  border: 1px solid #1f2937;
+  background: #0b1220;
+}
+
+/* 🎬 GIF ПО ЦЕНТРУ */
+.featured-media-center {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 420px;
+  height: 240px;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  border: 1px solid #1f2937;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.featured-media-center img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 📄 ТЕКСТ ПОВЕРХ */
+.featured-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  z-index: 2;
+
+  /* чтобы текст читался */
+  background: linear-gradient(
+    to right,
+    rgba(11, 18, 32, 0.9) 0%,
+    rgba(11, 18, 32, 0.4) 50%,
+    rgba(11, 18, 32, 0) 100%
+  );
+}
