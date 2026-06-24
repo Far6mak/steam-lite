@@ -5,25 +5,24 @@ export default function Library() {
   const removeFromLibrary = useGameStore((state) => state.removeFromLibrary);
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h2>My Library</h2>
+    <div className="page">
+      <h2>Library</h2>
 
-      {library.length === 0 ? (
-        <p>No games in library</p>
-      ) : (
-        library.map((game) => (
-          <div key={game.id} style={{ marginBottom: "10px" }}>
-            <span>{game.title}</span>
+      <div className="game-grid">
+        {library.length === 0 && <p>No games yet</p>}
 
-            <button
-              onClick={() => removeFromLibrary(game.id)}
-              style={{ marginLeft: "10px" }}
-            >
+        {library.map((game) => (
+          <div className="game-card" key={game.id}>
+            <h3>{game.title}</h3>
+            <p>{game.genre}</p>
+            <p>⭐ {game.rating}</p>
+
+            <button onClick={() => removeFromLibrary(game.id)}>
               Remove
             </button>
           </div>
-        ))
-      )}
+        ))}
+      </div>
     </div>
   );
 }

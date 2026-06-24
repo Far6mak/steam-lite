@@ -9,21 +9,23 @@ export default function Store() {
   const genreFilter = useGameStore((state) => state.genreFilter);
 
   const filteredGames = games
-    .filter((game) =>
-      game.title.toLowerCase().includes(searchQuery.toLowerCase())
+    .filter((g) =>
+      g.title.toLowerCase().includes(searchQuery.toLowerCase())
     )
-    .filter((game) =>
-      genreFilter === "All" ? true : game.genre === genreFilter
+    .filter((g) =>
+      genreFilter === "All" ? true : g.genre === genreFilter
     );
 
   return (
-    <div>
+    <div className="page">
       <h2>Store</h2>
 
-      <SearchBar />
-      <GenreFilter />
+      <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+        <SearchBar />
+        <GenreFilter />
+      </div>
 
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div className="game-grid">
         {filteredGames.map((game) => (
           <GameCard key={game.id} game={game} />
         ))}

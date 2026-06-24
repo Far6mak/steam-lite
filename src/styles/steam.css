@@ -1,10 +1,21 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
-  background: #111827;
+  padding: 14px 24px;
+  background: #0f172a;
   border-bottom: 1px solid #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -15,15 +26,14 @@
 
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 14px;
 }
 
 .nav-links a {
-  color: #e5e7eb;
+  color: #cbd5e1;
   text-decoration: none;
-  font-size: 14px;
   padding: 6px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: 0.2s;
 }
 
@@ -32,24 +42,70 @@
   color: white;
 }
 
+/* PAGE LAYOUT */
+.page {
+  padding: 20px;
+}
+
+/* GAME GRID */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* GAME CARD */
 .game-card {
-  background: #1f2937;
-  padding: 15px;
-  border-radius: 10px;
-  width: 200px;
-  margin: 10px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 14px;
+  transition: 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+}
+
+.game-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.game-card p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #9ca3af;
 }
 
 .game-card button {
   margin-top: 10px;
-  padding: 6px 10px;
+  width: 100%;
+  padding: 8px;
   border: none;
-  background: #3b82f6;
+  border-radius: 8px;
+  background: #2563eb;
   color: white;
-  border-radius: 6px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .game-card button:hover {
-  background: #2563eb;
+  background: #1d4ed8;
+}
+
+/* INPUT */
+input, select {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 10px;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #3b82f6;
 }
