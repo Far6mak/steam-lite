@@ -40,4 +40,7 @@ export const useGameStore = create((set, get) => ({
   setGenreFilter: (value) => {
     set({ genreFilter: value });
   },
+
+  sortType: "none",
+  setSortType: (value) => set({ sortType: value }),
 }));

@@ -109,3 +109,62 @@ input, select {
 input:focus, select:focus {
   border-color: #3b82f6;
 }
+
+.page h2 {
+  margin-bottom: 10px;
+}
+
+select {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.library-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.library-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  transition: 0.2s;
+}
+
+.library-item:hover {
+  border-color: #3b82f6;
+  transform: translateX(3px);
+}
+
+.library-info h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.library-info p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.remove-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+}

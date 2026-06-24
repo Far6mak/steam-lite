@@ -8,21 +8,28 @@ export default function Library() {
     <div className="page">
       <h2>Library</h2>
 
-      <div className="game-grid">
-        {library.length === 0 && <p>No games yet</p>}
+      {library.length === 0 ? (
+        <p style={{ opacity: 0.6 }}>Your library is empty</p>
+      ) : (
+        <div className="library-list">
+          {library.map((game) => (
+            <div className="library-item" key={game.id}>
+              <div className="library-info">
+                <h3>{game.title}</h3>
+                <p>{game.genre}</p>
+                <p>⭐ {game.rating}</p>
+              </div>
 
-        {library.map((game) => (
-          <div className="game-card" key={game.id}>
-            <h3>{game.title}</h3>
-            <p>{game.genre}</p>
-            <p>⭐ {game.rating}</p>
-
-            <button onClick={() => removeFromLibrary(game.id)}>
-              Remove
-            </button>
-          </div>
-        ))}
-      </div>
+              <button
+                className="remove-btn"
+                onClick={() => removeFromLibrary(game.id)}
+              >
+                Remove
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
