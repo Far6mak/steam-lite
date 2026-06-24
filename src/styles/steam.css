@@ -344,6 +344,28 @@ input::placeholder {
   background: var(--color-accent);
 }
 
+.game-card button.in-library {
+  background: #16a34a;
+  color: white;
+  cursor: default;
+  opacity: 0.9;
+}
+
+.game-card button.in-library:hover {
+  transform: none;
+  background: #16a34a;
+}
+
+.featured-overlay button.in-library {
+  background: #16a34a;
+  cursor: default;
+}
+
+.featured-overlay button.in-library:hover {
+  background: #16a34a;
+  transform: none;
+}
+
 /* ============================================================
    БИБЛИОТЕКА (список игр)
    ============================================================ */
@@ -394,6 +416,38 @@ input::placeholder {
 
 .remove-btn:hover {
   background: var(--color-danger-hover);
+}
+
+.play-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.play-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* когда игра запущена */
+.play-btn.running {
+  background: #f59e0b;
+}
+
+.play-btn.running:hover {
+  background: #d97706;
+}
+
+.library-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 /* ============================================================
