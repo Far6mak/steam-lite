@@ -1,16 +1,95 @@
-# React + Vite
+# 🎮 Game Store Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение разработано на **React** с использованием **Zustand** для управления состоянием.  
+Проект демонстрирует работу с компонентной архитектурой, фильтрацией данных, состояниями интерфейса и интерактивными элементами.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Возможности приложения
 
-## React Compiler
+### 🏪 Магазин (Store)
+- Просмотр списка игр
+- Карточки игр с изображениями (GIF/картинки)
+- Добавление игр в библиотеку
+- Отображение “Featured Game” (рекомендуемая игра)
+- Автоматическая смена рекомендуемой игры
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔎 Поиск и фильтрация
+- Поиск игр по названию
+- Фильтрация по жанрам
+- Динамическое обновление списка жанров
+- Сортировка (при наличии)
 
-## Expanding the ESLint configuration
+### 📚 Библиотека (Library)
+- Список добавленных игр
+- Удаление игр из библиотеки
+- Кнопка запуска игры (Play / Close)
+- Отображение статуса игры (запущена или нет)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎯 Featured Game
+- Автоматически выбирается случайная игра
+- Меняется каждые 30 секунд
+- Плавная анимация смены
+- Возможность добавить игру в библиотеку
+
+---
+
+## 🧠 Технологии
+
+- **React** – пользовательский интерфейс
+- **Zustand** – управление состоянием
+- **JavaScript (ES6+)** – логика приложения
+- **CSS** – кастомные стили
+
+---
+
+
+---
+
+## 🎮 Как работает приложение
+
+1. Пользователь открывает **Store**
+2. Выбирает игры через поиск или фильтр
+3. Добавляет игры в **библиотеку**
+4. В библиотеке может:
+   - запускать игру (Play)
+   - закрывать игру (Close)
+   - удалять игру из списка
+5. **Featured Game** показывает случайную игру каждые 30 секунд
+
+---
+
+## 💾 Особенности
+
+- Состояние библиотеки управляется глобально через Zustand
+- Интерфейс обновляется в реальном времени
+- Поддержка интерактивных UI элементов
+- Простая расширяемая архитектура
+
+---
+
+## 📈 Возможные улучшения
+
+- Добавление **LocalStorage** (сохранение библиотеки)
+- Система покупок (Buy / Owned)
+- **Toast** уведомления
+- Анимации переходов страниц
+- Улучшенный UI как в Steam
+- **API** подключение (реальные данные)
+
+---
+
+## ⚙️ Установка и запуск
+
+```bash
+# Клонируйте репозиторий
+git clone https://github.com/your-username/game-store-app.git
+
+# Перейдите в папку проекта
+cd game-store-app
+
+# Установите зависимости
+npm install
+
+# Запустите приложение в режиме разработки
+npm start
