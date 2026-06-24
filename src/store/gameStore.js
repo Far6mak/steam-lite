@@ -17,10 +17,8 @@ export const useGameStore = create((set, get) => ({
   // ➕ добавить в библиотеку
   addToLibrary: (game) => {
     const { library } = get();
-
     const exists = library.find((g) => g.id === game.id);
     if (exists) return;
-
     set({ library: [...library, game] });
   },
 
@@ -41,6 +39,16 @@ export const useGameStore = create((set, get) => ({
     set({ genreFilter: value });
   },
 
+  // 🧮 сортировка
   sortType: "none",
   setSortType: (value) => set({ sortType: value }),
+
+  // 🔄 ПЕРЕТАСКИВАНИЕ (изменение порядка в библиотеке)
+  reorderLibrary: (oldIndex, newIndex) =>
+    set((state) => {
+      const newLibrary = [...state.library];
+      const [movedItem] = newLibrary.splice(oldIndex, 1);
+      newLibrary.splice(newIndex, 0, movedItem);
+      return { library: newLibrary };
+    }),
 }));

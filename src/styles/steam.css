@@ -430,6 +430,14 @@ input::placeholder {
   transition: 0.2s;
 }
 
+.library-item {
+  cursor: grab;
+}
+
+.library-item:active {
+  cursor: grabbing;
+}
+
 .play-btn:hover {
   background: #1d4ed8;
   transform: translateY(-1px);
