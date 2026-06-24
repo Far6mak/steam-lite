@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #60a5fa;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  background: #1f2937;
+  color: white;
+}
+
+.game-card {
+  background: #1f2937;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  margin: 10px;
+}
+
+.game-card button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.game-card button:hover {
+  background: #2563eb;
+}
